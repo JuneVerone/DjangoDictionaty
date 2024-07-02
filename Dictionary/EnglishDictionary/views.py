@@ -11,6 +11,6 @@ def dictionary(request):
     if request.method == "POST":
         word = request.POST['word']
         
-        mean = wordmeaning.meaning(word)
+        mean = PyDictionary.meaning(word)
         return render(request, 'dictionary.html', {'word': word, 'mean' : mean})
     return render(request, 'dictionary.html')
